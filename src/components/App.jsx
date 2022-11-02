@@ -14,8 +14,6 @@ export class App extends Component {
     filter: '',
   };
 
-  generateId = nanoid(3);
-
   formSubmitHandler = ({ name, number }) => {
     const contactName = this.state.contacts.map(contact => contact.name);
     if (contactName.includes(name)) {
@@ -23,7 +21,7 @@ export class App extends Component {
     }
 
     this.setState(prevState => ({
-      contacts: [...prevState.contacts, { id: this.generateId, name, number }],
+      contacts: [...prevState.contacts, { id: nanoid(3), name, number }],
     }));
   };
 

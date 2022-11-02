@@ -4,10 +4,7 @@ import css from './ContactForm.module.css'
 
 class ContactForm extends Component {
   PropTypes = {
-    handleChange: PropTypes.func,
-    handleSubmit: PropTypes.func,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    onSubmit: PropTypes.func.isRequired,
   };
 
   state = {
