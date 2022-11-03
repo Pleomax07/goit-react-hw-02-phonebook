@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import css from './ContactForm.module.css'
+import css from './ContactForm.module.css';
 
 class ContactForm extends Component {
-  PropTypes = {
+  static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
 
@@ -31,9 +31,9 @@ class ContactForm extends Component {
     return (
       <form className={css.form} onSubmit={this.handleSubmit}>
         <label className={css.label}>
-          Name 
+          Name
           <input
-          className={css.input}
+            className={css.input}
             onChange={this.handleChange}
             value={this.state.name}
             type="text"
@@ -44,7 +44,7 @@ class ContactForm extends Component {
           />
         </label>
         <label>
-          Number 
+          Number
           <input
             onChange={this.handleChange}
             value={this.state.number}
@@ -55,7 +55,9 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button className={css.button} type="submit">Add contact</button>
+        <button className={css.button} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
